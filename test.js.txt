@@ -1,0 +1,39 @@
+//rizve
+let string = "Hello bangladesh i am Lucky";
+//store string format in array
+let string_array = string.split(" ");
+let blank_array = [];
+string_array.forEach(para => {
+  let push_array = [];
+  push_array = para.split("");
+  blank_array.push(push_array);
+});
+// console.log(blank_array);
+let main_array_length=blank_array.length-1;
+let second_array_for_push=[];
+for(let i =main_array_length;i>=0;i--){
+  let store_element_single_array=[];
+  let second_array_element_array=blank_array[i].length-1;
+  for(let j=second_array_element_array;j>=0;j--){
+    store_element_single_array.push(blank_array[i][j]);
+  }
+  second_array_for_push.push(store_element_single_array);
+}
+
+// console.log(second_array_for_push);
+let final_string="";
+for(let k=0;k<second_array_for_push.length;k++){
+ 
+  for(let l=0;l<second_array_for_push[k].length;l++){
+  final_string +=second_array_for_push[k][l];
+  }
+  final_string +=" ";
+}
+console.log(final_string);
+
+
+//foysal vai 
+str = str.split("");
+str = str.reverse();
+str = str.join("");
+console.log(str);
